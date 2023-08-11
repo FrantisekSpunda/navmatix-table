@@ -15,6 +15,10 @@ export const Table: React.FC<TableProps> = ({ className, table, ...props }) => {
     table.resetGlobalFilter()
   }
 
+  const logSelectedRows = () => {
+    console.log(table.getSelectedRowModel().rows.map((row) => row.original))
+  }
+
   return (
     <div className={cn('container pt-5', className)} {...props}>
       <div className="d-flex">
@@ -104,6 +108,10 @@ export const Table: React.FC<TableProps> = ({ className, table, ...props }) => {
       ) : null}
 
       <Pagination table={table} />
+
+      <button className="btn btn-success" onClick={logSelectedRows}>
+        Get selected rows
+      </button>
     </div>
   )
 }

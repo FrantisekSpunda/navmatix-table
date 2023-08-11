@@ -3,7 +3,7 @@ import { StateProps, CitiesRes } from 'types'
 import { slug } from 'utils'
 
 export const citiesFetcher = async ({ pagination, globalFilter, sorting, columnFilters }: StateProps) => {
-  const { data } = await axios.get<CitiesRes[]>('http://localhost:5173/cities.json')
+  const { data } = await axios.get<CitiesRes[]>('/cities.json')
 
   // Prepare data
   let records = data.map((record, i) => ({
