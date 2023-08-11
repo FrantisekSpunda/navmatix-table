@@ -1,1 +1,5 @@
-export * from './Table/Table';
+export * from './Table/Table'
+export * from './Icon'
+export * from './Pagination'
+export * from './Icon'
+export * from './InterminateCheckbox'

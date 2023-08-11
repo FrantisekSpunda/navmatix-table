@@ -5,7 +5,22 @@
  * @returns string
  */
 export function cn(...classes: any[]): string {
-	const strings: string[] = classes.filter((item) => typeof item === 'string');
+  const strings: string[] = classes.filter((item) => typeof item === 'string')
 
-	return strings.join(' ').trim();
+  return strings.join(' ').trim()
+}
+
+/**
+ * Return lowercase string without diacritics
+ * @param value
+ * @returns string
+ */
+export function slug(value: any): string {
+  return value
+    ? String(value)
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+    : ''
 }
