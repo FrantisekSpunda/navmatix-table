@@ -1,27 +1,20 @@
-# React + TypeScript + Vite
+# Navmatix table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite application that should meet requirements of task from Navmatix
 
-Currently, two official plugins are available:
+App contains table with data of American cities. The main requirement was create table managed by react-table package. Apply functionalities, like sorting, filtering, panination etc. just with react-table. I also applied react-query for client-side communication with API (this is example, so I'm just using data from JSON file).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create whole project and become more familiar with libraries I didn't have so much experience (react-table, bootstrap) took me around 5 hours. But most of time I was just struggling with bootstrap 😄.
 
-## Expanding the ESLint configuration
+## important npm packages 📦
+- react
+- typescript
+- react-table
+- react-query
+- bootstrap
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to run app
+1. clone app with git or just download
+2. run `npm i`
+3. run `npm start`
+4. open localhost in browser on the appropriate port
