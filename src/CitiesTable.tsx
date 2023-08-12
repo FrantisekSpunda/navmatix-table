@@ -50,7 +50,7 @@ const columns: ColumnDef<CitiesRes & { id: number }, any>[] = [
   },
 ]
 
-function App() {
+function CitiesTable() {
   // State for manual changes of table state. We need this, because we use backend for pagination, sorting, filtering etc.
   const [state, setState] = React.useState<StateProps>({
     pagination: { pageIndex: 0, pageSize: 10 },
@@ -121,4 +121,4 @@ function App() {
   )
 }
 
-export default App
+export default CitiesTable
